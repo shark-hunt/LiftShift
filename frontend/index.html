@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="theme-color" content="#0b1220" />
+    <meta name='impact-site-verification' value='91d20f84-48ac-47d4-b538-9cfa7cd8fcf2'>
+    
+    <script>
+      (function () {
+        try {
+          var key = 'hevy_analytics_theme_mode';
+          var stored = localStorage.getItem(key);
+          var mode =
+            stored === 'light' || stored === 'medium-dark' || stored === 'midnight-dark' || stored === 'pure-black'
+              ? stored
+              : 'pure-black';
+          document.documentElement.dataset.theme = mode;
+          document.documentElement.style.colorScheme = mode === 'light' ? 'light' : 'dark';
+        } catch (e) {
+          // ignore
+        }
+      })();
+    </script>
+    
+    <script>
+      (function () {
+        // GitHub Pages SPA deep-linking support.
+        // If we were redirected via /404.html, restore the original URL so the app can load normally.
+        try {
+          var params = new URLSearchParams(window.location.search || '');
+          var p = params.get('p');
+          var q = params.get('q');
+          var h = params.get('h');
+          if (!p) return;
+
+          params.delete('p');
+          params.delete('q');
+          params.delete('h');
+
+          var rest = params.toString();
+          var search = (q ? decodeURIComponent(q) : '') || (rest ? '?' + rest : '');
+          var hash = (h ? decodeURIComponent(h) : '');
+          var path = decodeURIComponent(p);
+
+          var baseHref = document.querySelector('base')?.getAttribute('href') || '/';
+          var basePath = baseHref.endsWith('/') ? baseHref : baseHref + '/';
+
+          if (basePath !== '/' && path.indexOf(basePath) !== 0) {
+            var baseNoSlash = basePath.slice(0, -1);
+            path = baseNoSlash + (path.startsWith('/') ? path : '/' + path);
+          }
+
+          window.history.replaceState(null, '', path + search + hash);
+        } catch (e) {
+          // ignore
+        }
+      })();
+    </script>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="LiftShift is the best free workout analytics dashboard add-on for fitness tracking apps. Transform Hevy, Strong, Lyfta data into powerful insights with advanced visualization tools. Compare features with Strava, Garmin, Apple Health dashboards.">
+    <meta name="keywords" content="workout analytics dashboard, fitness tracking app add-on, Hevy analytics dashboard, Strong app analytics, workout data visualization, fitness dashboard tools, workout logging dashboard, fitness app analytics, training volume dashboard, muscle heatmap analytics, personal records dashboard, exercise history visualization, fitness tracking comparison, Strava dashboard alternative, Garmin analytics, Apple Health dashboard, fitness BI tools, workout app dashboard plugins, free fitness analytics, workout data dashboard tools">
+    <meta name="author" content="LiftShift">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LiftShift - Free Workout Analytics Dashboard">
+    <meta property="og:description" content="The ultimate workout analytics dashboard add-on for fitness apps. Transform Hevy, Strong, Lyfta data into powerful insights with advanced visualization tools and free analytics features.">
+    <meta property="og:site_name" content="LiftShift">
+    <meta property="og:url" content="https://liftshift.app/">
+    <meta property="og:image" content="https://liftshift.app/UI/logo.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LiftShift - Free Workout Analytics Dashboard">
+    <meta name="twitter:description" content="The ultimate workout analytics dashboard add-on for fitness apps. Transform Hevy, Strong, Lyfta data into powerful insights with advanced visualization tools and free analytics features.">
+    <meta name="twitter:image" content="https://liftshift.app/UI/logo.png">
+    <base href="%BASE_URL%">
+    <title>LiftShift - Best Free Workout Analytics Dashboard Add-On | Hevy, Strong, Fitness App Analytics</title>
+      <link rel="icon" href="favicon.ico">
+      <link rel="icon" href="favicon.png" type="image/png" sizes="48x48">
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="apple-touch-icon" href="UI/logo.png" sizes="180x180">
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "LiftShift",
+            "url": "https://liftshift.app/",
+            "image": "https://liftshift.app/UI/logo.png"
+          },
+          {
+            "@type": "Organization",
+            "name": "LiftShift",
+            "url": "https://liftshift.app/",
+            "logo": "https://liftshift.app/UI/logo.png",
+            "sameAs": ["https://github.com/aree6/LiftShift"]
+          },
+          {
+            "@type": "WebApplication",
+            "name": "LiftShift",
+            "url": "https://liftshift.app/",
+            "applicationCategory": "HealthApplication",
+            "operatingSystem": "Web",
+            "isAccessibleForFree": true
+          }
+        ]
+      }
+      </script>
+    <link rel="canonical" href="https://liftshift.app/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+      /* Custom Scrollbar for a sleeker look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--scrollbar-track);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--scrollbar-thumb-hover);
+      }
+      
+      /* Mobile touch improvements */
+      @media (max-width: 640px) {
+        * {
+          -webkit-user-select: none;
+          user-select: none;
+          -webkit-touch-callout: none;
+        }
+        input, textarea, button {
+          -webkit-user-select: text;
+          user-select: text;
+          -webkit-touch-callout: default;
+        }
+      }
+      
+      /* Smooth animations */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      
+      @keyframes slideIn {
+        from { opacity: 0; transform: translateX(-10px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      
+      @keyframes scaleIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      
+      .animate-in {
+        animation: fadeIn 0.3s ease-out;
+      }
+      
+      .fade-in {
+        animation: fadeIn 0.3s ease-out;
+      }
+      
+      .slide-in-from-top-2 {
+        animation: slideIn 0.3s ease-out;
+      }
+      
+      .slide-in-from-bottom-2 {
+        animation: slideIn 0.3s ease-out reverse;
+      }
+      
+      /* Italic text styling with Libre Baskerville */
+      em, i, [class*="italic"] {
+        font-family: "Libre Baskerville", "Poppins", sans-serif !important;
+        font-weight: 600;
+        font-style: italic;
+      }
+      
+      /* Smooth transitions for all interactive elements */
+      * {
+        transition-property: color, background-color, border-color, opacity, box-shadow;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+      
+      /* Chart container animations */
+      [class*="bg-slate-900 border"] {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      [class*="bg-slate-900 border"]:hover {
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      }
+      
+      /* Noscript fallback styling */
+      .noscript-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        color: #e2e8f0;
+        font-family: system-ui, sans-serif;
+        line-height: 1.6;
+      }
+      .noscript-content h1 { font-size: 2rem; margin-bottom: 1rem; }
+      .noscript-content h2 { font-size: 1.5rem; margin: 1.5rem 0 0.75rem; }
+      .noscript-content p { margin-bottom: 1rem; color: #94a3b8; }
+      .noscript-content ul { margin-left: 1.5rem; margin-bottom: 1rem; }
+      .noscript-content li { margin-bottom: 0.5rem; color: #94a3b8; }
+    </style>
+</head>
+  <body class="antialiased h-screen overflow-hidden">
+    <div id="root" class="h-full w-full"></div>
+    
+    <!-- SEO-friendly noscript content for crawlers -->
+    <noscript>
+      <div class="noscript-content" style="background: #0f172a;">
+        <h1>LiftShift - Best Free Workout Analytics Dashboard Add-On</h1>
+        <p>The ultimate workout analytics dashboard for fitness tracking apps. Transform Hevy, Strong, Lyfta data into powerful insights with advanced visualization tools. Compare with Strava, Garmin, Apple Health dashboards.</p>
+        
+        <h2>Supported Workout Apps</h2>
+        <ul>
+          <li><strong>Hevy</strong> - Direct API sync or CSV import</li>
+          <li><strong>Strong</strong> - CSV data import</li>
+          <li><strong>Lyfta</strong> - CSV data import</li>
+        </ul>
+        
+        <h2>Features</h2>
+        <ul>
+          <li><strong>Advanced Analytics Dashboard</strong> - Professional-grade workout data visualization and insights</li>
+          <li><strong>Volume Analysis Dashboard</strong> - Track weekly and monthly training volume across all exercises</li>
+          <li><strong>Personal Records Dashboard</strong> - Automatic PR detection and tracking for every exercise</li>
+          <li><strong>Muscle Heatmaps</strong> - Visualize which muscle groups you're training most with interactive charts</li>
+          <li><strong>Strength Trends Dashboard</strong> - See your strength progression with detailed analytics charts</li>
+          <li><strong>Activity Calendar Dashboard</strong> - GitHub-style contribution heatmap showing training consistency</li>
+          <li><strong>Exercise Breakdown Analytics</strong> - Deep dive into individual exercises with set-by-set history</li>
+          <li><strong>Fitness App Integration</strong> - Works with Hevy, Strong, Lyfta and other workout logging apps</li>
+        </ul>
+        
+        <h2>Privacy First</h2>
+        <p>All workout data is processed locally in your browser. We don't store your training history on any server. Your personal records, exercise data, and workout patterns remain completely private.</p>
+        
+        <h2>How It Works</h2>
+        <ol>
+          <li>Choose your workout app (Hevy, Strong, or Lyfta)</li>
+          <li>Import your data via API or CSV file</li>
+          <li>Explore your personalized analytics dashboard</li>
+        </ol>
+
+        <h2>Reference Pages</h2>
+        <ul>
+          <li><a href="%BASE_URL%about/">About LiftShift</a></li>
+          <li><a href="%BASE_URL%how-it-works/">How LiftShift works</a></li>
+          <li><a href="%BASE_URL%privacy/">Privacy model</a></li>
+          <li><a href="%BASE_URL%supported-apps/">Supported apps</a></li>
+          <li><a href="%BASE_URL%metrics/">Metrics glossary</a></li>
+          <li><a href="%BASE_URL%faq/">FAQ</a></li>
+          <li><a href="%BASE_URL%ai/">AI reference</a></li>
+          <li><a href="%BASE_URL%llms.txt">llms.txt</a></li>
+        </ul>
+        
+        <p>Please enable JavaScript to use LiftShift.</p>
+      </div>
+    </noscript>
+    
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
